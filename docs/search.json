@@ -1,10 +1,31 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "standard/standard-1/relative-frequency-and-probability.html",
+    "href": "standard/standard-1/relative-frequency-and-probability.html",
+    "title": "Relative frequency and probability",
     "section": "",
-    "text": "About this site"
+    "text": "NoteSyllabus outcomes\n\n\n\nMST-12-S1-07 models and solves problems involving the probabilities of simple and compound events.\nMAO-WM-01 (Working mathematically) develops understanding and fluency in mathematics through exploring and connecting mathematical concepts, choosing and applying mathematical techniques to solve problems, and communicating their thinking and reasoning coherently and clearly."
+  },
+  {
+    "objectID": "standard/standard-1/investment.html",
+    "href": "standard/standard-1/investment.html",
+    "title": "Investment",
+    "section": "",
+    "text": "NoteSyllabus outcomes\n\n\n\nMST-12-S1-02 solves problems involving simple interest and compound interest to make decisions about financial situations.\nMAO-WM-01 (Working mathematically) develops understanding and fluency in mathematics through exploring and connecting mathematical concepts, choosing and applying mathematical techniques to solve problems, and communicating their thinking and reasoning coherently and clearly."
+  },
+  {
+    "objectID": "standard/standard-1/depreciation-and-loans.html",
+    "href": "standard/standard-1/depreciation-and-loans.html",
+    "title": "Depreciation and loans",
+    "section": "",
+    "text": "NoteSyllabus outcomes\n\n\n\nMST-12-S1-03 solves problems involving interest and depreciation to make decisions about loans and credit cards.\nMAO-WM-01 (Working mathematically) develops understanding and fluency in mathematics through exploring and connecting mathematical concepts, choosing and applying mathematical techniques to solve problems, and communicating their thinking and reasoning coherently and clearly."
+  },
+  {
+    "objectID": "standard/standard-1/algebraic-relationships.html",
+    "href": "standard/standard-1/algebraic-relationships.html",
+    "title": "Algebraic relationships",
+    "section": "",
+    "text": "NoteSyllabus outcomes\n\n\n\nMST-12-S1-01 represents and interprets the relationships between quantities in algebraic and graphical forms.\nMAO-WM-01 (Working mathematically) develops understanding and fluency in mathematics through exploring and connecting mathematical concepts, choosing and applying mathematical techniques to solve problems, and communicating their thinking and reasoning coherently and clearly."
   },
   {
     "objectID": "index.html#choose-your-course",
@@ -12,5 +33,61 @@
     "title": "HSC Mathematics Notes",
     "section": "Choose your course",
     "text": "Choose your course\n\n\nStandard\nFor the Mathematics Standard course. Core topics through to Standard 2.\nStart here\n\n\nAdvanced\nFor the Mathematics Advanced course. Functions, calculus, statistics, and more.\nStart here\n\n\nExtension 1\nBuilds on Advanced. Further calculus, combinatorics, vectors, and proof.\nStart here\n\n\nExtension 2\nThe most advanced course. Complex numbers, mechanics, and rigorous proof.\nStart here"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "standard/index.html",
+    "href": "standard/index.html",
+    "title": "HSC Mathematics Standard",
+    "section": "",
+    "text": "Notes for the Year 12 Mathematics Standard course, covering both pathways. All students complete the Year 11 focus areas first, then branch into either Standard 1 or Standard 2. Choose your pathway below.\n\n\nStandard 1\nAlgebraic relationships, Investment, Depreciation and loans, Right-angled triangles, Ratios and rates, Bivariate data analysis, and Relative frequency and probability.\nStart here\n\n\nStandard 2\nAlgebraic relationships, Investment and loans, Annuities, Trigonometry, Ratios and rates, Network flow, Critical path analysis, Bivariate data analysis, Relative frequency and probability, and The normal distribution.\nStart here"
+  },
+  {
+    "objectID": "standard/standard-1/bivariate-data-analysis.html",
+    "href": "standard/standard-1/bivariate-data-analysis.html",
+    "title": "Bivariate data analysis",
+    "section": "",
+    "text": "NoteSyllabus outcomes\n\n\n\nMST-12-S1-06 displays and interprets bivariate datasets to solve problems and make predictions.\nMAO-WM-01 (Working mathematically) develops understanding and fluency in mathematics through exploring and connecting mathematical concepts, choosing and applying mathematical techniques to solve problems, and communicating their thinking and reasoning coherently and clearly."
+  },
+  {
+    "objectID": "standard/standard-1/index.html",
+    "href": "standard/standard-1/index.html",
+    "title": "Mathematics Standard 1",
+    "section": "",
+    "text": "Notes for the Year 12 Mathematics Standard 1 pathway. Seven focus areas across four areas of study: Algebra, Financial mathematics, Measurement, and Statistics.\n\n\nAlgebraic relationships\nSimultaneous linear equations and graphs of practical situations.\nNotes\n\n\nInvestment\nSimple and compound interest, and comparing investment strategies.\nNotes\n\n\nDepreciation and loans\nDepreciation methods, reducing balance loans, and credit cards.\nNotes\n\n\nRight-angled triangles\nPythagoras’ theorem and trigonometry in right-angled triangles.\nNotes\n\n\nRatios and rates\nInterpreting ratios and rates to solve practical problems.\nNotes\n\n\nBivariate data analysis\nDisplaying and interpreting bivariate datasets.\nNotes\n\n\nRelative frequency and probability\nProbabilities of simple and compound events.\nNotes"
+  },
+  {
+    "objectID": "standard/standard-1/ratios-and-rates.html",
+    "href": "standard/standard-1/ratios-and-rates.html",
+    "title": "Ratios and rates",
+    "section": "",
+    "text": "NoteSyllabus outcomes\n\n\n\nMST-12-S1-05 interprets ratios and rates to solve problems in practical contexts.\nMAO-WM-01 (Working mathematically) develops understanding and fluency in mathematics through exploring and connecting mathematical concepts, choosing and applying mathematical techniques to solve problems, and communicating their thinking and reasoning coherently and clearly."
+  },
+  {
+    "objectID": "standard/standard-1/right-angled-triangles.html",
+    "href": "standard/standard-1/right-angled-triangles.html",
+    "title": "Right-angled triangles",
+    "section": "",
+    "text": "NoteSyllabus outcomes\n\n\n\nMST-12-S1-04 applies Pythagoras’ theorem and trigonometry to solve problems involving right-angled triangles.\nMAO-WM-01 (Working mathematically) develops understanding and fluency in mathematics through exploring and connecting mathematical concepts, choosing and applying mathematical techniques to solve problems, and communicating their thinking and reasoning coherently and clearly."
+  },
+  {
+    "objectID": "standard/standard-1/right-angled-triangles.html#pythagoras-theorem",
+    "href": "standard/standard-1/right-angled-triangles.html#pythagoras-theorem",
+    "title": "Right-angled triangles",
+    "section": "Pythagoras’ theorem",
+    "text": "Pythagoras’ theorem\nIn any right-angled triangle, the side opposite the right angle is the longest side and is called the hypotenuse.\n\n\n\n\n\n\n\n\nFigure 1: A right-angled triangle with sides a, b, c and vertices A, B, C.\n\n\n\n\n\nPythagoras’ theorem links the three side lengths:\n\\[\\begin{equation}\nc^2 = a^2 + b^2,\n\\end{equation}\\]\nwhere \\(c\\) is the hypotenuse, and \\(a\\) and \\(b\\) are the two shorter sides.\nTo find the hypotenuse, add the squares of the two shorter sides and take the square root. To find a shorter side, rearrange to \\(a^2 = c^2 - b^2\\).\n\nWorked example 1: finding the hypotenuse\nA ramp rises \\(1.5\\) m vertically over a horizontal distance of \\(3.6\\) m. Find the length of the ramp surface.\n\n\n\n\n\n\n\n\nFigure 2: A ramp rising 1.5 m over a horizontal distance of 3.6 m.\n\n\n\n\n\nThe ramp surface is the hypotenuse:\n\\[\\begin{align}\nc^2 & = a^2 + b^2 \\\\\n& = 1.5^2 + 3.6^2\\\\\n& = 2.25 + 12.96 \\\\\n& = 15.21\\\\\nc & = \\sqrt{15.21}\\\\\n& = 3.9 \\text{ m}.\n\\end{align}\\]\n\n\nWorked example 2: finding a shorter side\nA ladder \\(5\\) m long leans against a wall, with its base \\(1.4\\) m from the wall. How far up the wall does it reach?\n\n\n\n\n\n\n\n\nFigure 3: A 5 m ladder with its base 1.4 m from the wall.\n\n\n\n\n\nHere the ladder is the hypotenuse, so rearrange:\n\\[\\begin{align}\na^2 & = c^2 - b^2\\\\\n& = 5^2 - 1.4^2\\\\\n& = 25 - 1.96\\\\\n&  = 23.04 \\\\\na & = \\sqrt{23.04}\\\\\n& = 4.8 \\text{ m}.\n\\end{align}\\]\nThe above two examples, cover every possible type of question related to two-dimensional right-angled triangles."
+  },
+  {
+    "objectID": "standard/standard-1/right-angled-triangles.html#trigonometric-ratios-finding-an-unknown-side",
+    "href": "standard/standard-1/right-angled-triangles.html#trigonometric-ratios-finding-an-unknown-side",
+    "title": "Right-angled triangles",
+    "section": "Trigonometric ratios: finding an unknown side",
+    "text": "Trigonometric ratios: finding an unknown side\nPythagoras’ theorem lets us find a third side when we know the other two. Trigonometry lets us find an unknown side when we know one side and one angle (other than the right angle).\nIn a right-angled triangle, the three sides are named relative to the angle we are working with, call it \\(\\theta\\). The hypotenuse is always opposite the right angle. The opposite side is across from \\(\\theta\\), and the adjacent side is next to \\(\\theta\\).\n\n\n\n\n\n\n\n\nFigure 4: The three sides named relative to the angle θ.\n\n\n\n\n\nThe three trigonometric ratios relate \\(\\theta\\) to pairs of these sides:\n\\[\\begin{equation}\n\\sin\\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}}, \\qquad\n\\cos\\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}}, \\qquad\n\\tan\\theta = \\frac{\\text{opposite}}{\\text{adjacent}}.\n\\end{equation}\\]\nA common way to remember these is SOH CAH TOA: Sin = Opposite over Hypotenuse, Cos = Adjacent over Hypotenuse, Tan = Opposite over Adjacent.\nTo find an unknown side, decide which two sides the problem involves (one known, one unknown), choose the ratio that uses exactly those two sides, then rearrange to make the unknown the subject.\n\nWorked example 1: finding a side using the sine ratio\nA support wire runs from the top of a \\(35^{\\circ}\\) slope to a point on the ground. The wire makes an angle of \\(35^{\\circ}\\) with the ground and is \\(12\\) m long. Find the height \\(h\\) it reaches, to one decimal place.\n\n\n\n\n\n\n\n\nFigure 5: A 12 m wire making an angle of 35° with the ground.\n\n\n\n\n\nThe height is opposite the known angle, and the wire is the hypotenuse, so use the sine ratio:\n\\[\\begin{align}\n\\sin 35^{\\circ} & = \\frac{h}{12}\\\\\nh & = 12 \\times \\sin 35^{\\circ}\\\\\n& = 12 \\times 0.5736\\ldots\\\\\n& = 6.9 \\text{ m}.\n\\end{align}\\]\n\n\nWorked example 2: finding a side using the tangent ratio, with an angle in degrees and minutes\nA ramp makes an angle of \\(8^{\\circ}30'\\) (that is, \\(8\\) degrees and \\(30\\) minutes) with the horizontal. The horizontal distance covered is \\(4.2\\) m. Find the vertical rise \\(x\\), to two decimal places.\n\n\n\n\n\n\n\n\nFigure 6: A ramp making an angle of 8°30′ with the horizontal over 4.2 m.\n\n\n\n\n\nFirst convert the angle to a decimal number of degrees. There are \\(60\\) minutes in one degree, so\n\\[\\begin{equation}\n8^{\\circ}30' = 8 + \\frac{30}{60} = 8.5^{\\circ}.\n\\end{equation}\\]\nThe rise is opposite the angle and the horizontal distance is adjacent, so use the tangent ratio:\n\\[\\begin{align}\n\\tan 8.5^{\\circ} & = \\frac{x}{4.2}\\\\\nx & = 4.2 \\times \\tan 8.5^{\\circ}\\\\\n& = 4.2 \\times 0.1495\\ldots\\\\\n& = 0.63 \\text{ m}.\n\\end{align}\\]\nAlternatively, most calculators accept degrees and minutes directly using the degrees–minutes–seconds button, so you can enter \\(8^{\\circ}30'\\) without converting first. Either method gives the same result.\n\n\nWorked example 3: finding a side using the cosine ratio\nA guy rope is attached to the top of a pole and anchored to the ground. The rope is \\(6\\) m long and makes an angle of \\(52^{\\circ}\\) with the ground. Find the horizontal distance \\(d\\) from the base of the pole to the anchor point, to one decimal place.\n\n\n\n\n\n\n\n\nFigure 7: A 6 m guy rope making an angle of 52° with the ground.\n\n\n\n\n\nThe horizontal distance is adjacent to the known angle, and the rope is the hypotenuse, so use the cosine ratio:\n\\[\\begin{align}\n\\cos 52^{\\circ} & = \\frac{d}{6}\\\\\nd & = 6 \\times \\cos 52^{\\circ}\\\\\n& = 6 \\times 0.6157\\ldots\\\\\n& = 3.7 \\text{ m}.\n\\end{align}\\]\nTogether these examples show the full method: name the sides relative to the known angle, choose the ratio (\\(\\sin\\), \\(\\cos\\) or \\(\\tan\\)) that links the known side to the unknown side, then rearrange and evaluate, converting any angle given in degrees and minutes as needed."
   }
 ]

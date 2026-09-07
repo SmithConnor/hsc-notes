@@ -1,0 +1,24 @@
+---
+title: "HSC Mathematics Standard"
+toc: false
+---
+
+Notes for the Year 12 Mathematics Standard course, covering both pathways. All students complete the Year 11 focus areas first, then branch into either Standard 1 or Standard 2. Choose your pathway below.
+
+::: {.grid}
+
+::: {.g-col-6}
+### Standard 1
+Algebraic relationships, Investment, Depreciation and loans, Right-angled triangles, Ratios and rates, Bivariate data analysis, and Relative frequency and probability.
+
+[Start here](standard-1/index.qmd){.btn .btn-primary}
+:::
+
+::: {.g-col-6}
+### Standard 2
+Algebraic relationships, Investment and loans, Annuities, Trigonometry, Ratios and rates, Network flow, Critical path analysis, Bivariate data analysis, Relative frequency and probability, and The normal distribution.
+
+[Start here](standard-2/index.qmd){.btn .btn-primary}
+:::
+
+:::

@@ -1,0 +1,363 @@
+---
+title: "Right-angled triangles"
+lightbox: true
+---
+
+```{r}
+#| label: setup
+#| echo: false
+#| warning: false
+
+library(ggplot2)
+```
+
+::: {.callout-note}
+## Syllabus outcomes
+**MST-12-S1-04** applies Pythagoras' theorem and trigonometry to solve problems involving right-angled triangles.
+
+**MAO-WM-01** (Working mathematically) develops understanding and fluency in mathematics through exploring and connecting mathematical concepts, choosing and applying mathematical techniques to solve problems, and communicating their thinking and reasoning coherently and clearly.
+:::
+
+## Pythagoras' theorem
+
+In any right-angled triangle, the side opposite the right angle is the longest side and is called the **hypotenuse**. 
+
+```{r}
+#| label: fig-triangle
+#| fig-cap: "A right-angled triangle with sides a, b, c and vertices A, B, C."
+#| fig-width: 4
+#| fig-height: 3
+#| echo: false
+#| warning: false
+
+tri <- data.frame(
+  x = c(0, 3.6, 0),
+  y = c(0, 0, 1.5)
+)
+
+sq <- 0.25
+rightangle <- data.frame(
+  x = c(sq, sq, 0),
+  y = c(0, sq, sq)
+)
+
+ggplot() +
+  geom_polygon(data = tri, aes(x, y),
+               fill = "grey90", colour = "black", linewidth = 0.8) +
+  geom_path(data = rightangle, aes(x, y), colour = "black", linewidth = 0.5) +
+  annotate("text", x = 1.8, y = -0.2, label = "italic(b)", parse = TRUE) + 
+  annotate("text", x = -0.35, y = 0.75, label = "italic(a)", parse = TRUE) + 
+  annotate("text", x = 2.0, y = 0.95, label = "italic(c)", parse = TRUE) + 
+  annotate("text", x = -0.2, y = -0.2, label = "C", fontface = "bold") +
+  annotate("text", x = 3.8, y = -0.2, label = "A", fontface = "bold") +
+  annotate("text", x = -0.2, y = 1.65, label = "B", fontface = "bold") +
+  coord_equal() +
+  theme_void()
+```
+
+Pythagoras' theorem links the three side lengths:
+
+\begin{equation}
+c^2 = a^2 + b^2,
+\end{equation}
+
+where $c$ is the hypotenuse, and $a$ and $b$ are the two shorter sides.
+
+To find the hypotenuse, add the squares of the two shorter sides and take the square root. To find a shorter side, rearrange to $a^2 = c^2 - b^2$.
+
+### Worked example 1: finding the hypotenuse
+
+A ramp rises $1.5$ m vertically over a horizontal distance of $3.6$ m. Find the length of the ramp surface.
+
+```{r}
+#| label: fig-ramp
+#| fig-cap: "A ramp rising 1.5 m over a horizontal distance of 3.6 m."
+#| fig-width: 4
+#| fig-height: 3
+#| echo: false
+#| warning: false
+
+tri <- data.frame(
+  x = c(0, 3.6, 0),
+  y = c(0, 0, 1.5)
+)
+
+sq <- 0.25
+rightangle <- data.frame(
+  x = c(sq, sq, 0),
+  y = c(0, sq, sq)
+)
+
+ggplot() +
+  geom_polygon(data = tri, aes(x, y),
+               fill = "grey90", colour = "black", linewidth = 0.8) +
+  geom_path(data = rightangle, aes(x, y), colour = "black", linewidth = 0.5) +
+  annotate("text", x = 1.8, y = -0.2, label = "3.6 m") +
+  annotate("text", x = -0.35, y = 0.75, label = "1.5 m") +
+  annotate("text", x = 2.0, y = 0.95, label = "italic(c)", parse = TRUE) +
+  coord_equal() +
+  theme_void()
+```
+
+The ramp surface is the hypotenuse:
+
+\begin{align}
+c^2 & = a^2 + b^2 \\
+& = 1.5^2 + 3.6^2\\
+& = 2.25 + 12.96 \\
+& = 15.21\\
+c & = \sqrt{15.21}\\
+& = 3.9 \text{ m}.
+\end{align}
+
+### Worked example 2: finding a shorter side
+
+A ladder $5$ m long leans against a wall, with its base $1.4$ m from the wall. How far up the wall does it reach?
+
+```{r}
+#| label: fig-ladder
+#| fig-cap: "A 5 m ladder with its base 1.4 m from the wall."
+#| fig-width: 3
+#| fig-height: 4
+#| echo: false
+#| warning: false
+
+library(ggplot2)
+
+tri <- data.frame(
+  x = c(0, 1.4, 0),
+  y = c(0, 0, 4.8)
+)
+
+sq <- 0.25
+rightangle <- data.frame(
+  x = c(sq, sq, 0),
+  y = c(0, sq, sq)
+)
+
+ggplot() +
+  geom_polygon(data = tri, aes(x, y),
+               fill = "grey90", colour = "black", linewidth = 0.8) +
+  geom_path(data = rightangle, aes(x, y), colour = "black", linewidth = 0.5) +
+  annotate("text", x = 0.7, y = -0.25, label = "1.4 m") +
+  annotate("text", x = -0.3, y = 2.4, label = "italic(a)", parse = TRUE) +
+  annotate("text", x = 1.0, y = 2.6, label = "5 m") +
+  coord_equal(clip = "off") +
+  expand_limits(x = c(-0.6, 1.6), y = c(-0.5, 5)) +
+  theme_void()
+```
+
+Here the ladder is the hypotenuse, so rearrange:
+
+\begin{align}
+a^2 & = c^2 - b^2\\
+& = 5^2 - 1.4^2\\
+& = 25 - 1.96\\
+&  = 23.04 \\
+a & = \sqrt{23.04}\\
+& = 4.8 \text{ m}.
+\end{align}
+
+The above two examples, cover every possible type of question related to two-dimensional right-angled triangles.
+
+## Trigonometric ratios: finding an unknown side
+
+Pythagoras' theorem lets us find a third side when we know the other two. Trigonometry lets us find an unknown side when we know one side and one angle (other than the right angle).
+
+In a right-angled triangle, the three sides are named relative to the angle we are working with, call it $\theta$. The **hypotenuse** is always opposite the right angle. The **opposite** side is across from $\theta$, and the **adjacent** side is next to $\theta$.
+
+```{r}
+#| label: fig-labelled-sides
+#| fig-cap: "The three sides named relative to the angle θ."
+#| fig-width: 4
+#| fig-height: 3
+#| echo: false
+#| warning: false
+
+library(ggplot2)
+
+tri <- data.frame(
+  x = c(0, 3.6, 0),
+  y = c(0, 0, 2.4)
+)
+
+sq <- 0.25
+rightangle <- data.frame(
+  x = c(sq, sq, 0),
+  y = c(0, sq, sq)
+)
+
+ggplot() +
+  geom_polygon(data = tri, aes(x, y),
+               fill = "grey90", colour = "black", linewidth = 0.8) +
+  geom_path(data = rightangle, aes(x, y), colour = "black", linewidth = 0.5) +
+  annotate("text", x = 1.8, y = -0.25, label = "adjacent") +
+  annotate("text", x = -0.55, y = 1.2, label = "opposite") +
+  annotate("text", x = 2.1, y = 1.5, label = "hypotenuse") +
+  annotate("text", x = 3.0, y = 0.22, label = "theta", parse = TRUE) +
+  coord_equal(clip = "off") +
+  expand_limits(x = c(-0.9, 3.9)) +
+  theme_void()
+```
+
+The three trigonometric ratios relate $\theta$ to pairs of these sides:
+
+\begin{equation}
+\sin\theta = \frac{\text{opposite}}{\text{hypotenuse}}, \qquad
+\cos\theta = \frac{\text{adjacent}}{\text{hypotenuse}}, \qquad
+\tan\theta = \frac{\text{opposite}}{\text{adjacent}}.
+\end{equation}
+
+A common way to remember these is **SOH CAH TOA**: **S**in = **O**pposite over **H**ypotenuse, **C**os = **A**djacent over **H**ypotenuse, **T**an = **O**pposite over **A**djacent.
+
+To find an unknown side, decide which two sides the problem involves (one known, one unknown), choose the ratio that uses exactly those two sides, then rearrange to make the unknown the subject.
+
+### Worked example 1: finding a side using the sine ratio
+
+A support wire runs from the top of a $35^{\circ}$ slope to a point on the ground. The wire makes an angle of $35^{\circ}$ with the ground and is $12$ m long. Find the height $h$ it reaches, to one decimal place.
+
+```{r}
+#| label: fig-wire
+#| fig-cap: "A 12 m wire making an angle of 35° with the ground."
+#| fig-width: 4
+#| fig-height: 3
+#| echo: false
+#| warning: false
+
+library(ggplot2)
+
+tri <- data.frame(
+  x = c(0, 3.6, 3.6),
+  y = c(0, 0, 2.52)
+)
+
+sq <- 0.25
+rightangle <- data.frame(
+  x = c(3.6 - sq, 3.6 - sq, 3.6),
+  y = c(0, sq, sq)
+)
+
+ggplot() +
+  geom_polygon(data = tri, aes(x, y),
+               fill = "grey90", colour = "black", linewidth = 0.8) +
+  geom_path(data = rightangle, aes(x, y), colour = "black", linewidth = 0.5) +
+  annotate("text", x = 1.6, y = 1.5, label = "12 m") +
+  annotate("text", x = 3.95, y = 1.26, label = "italic(h)", parse = TRUE) +
+  annotate("text", x = 0.75, y = 0.18, label = "35*degree", parse = TRUE) +
+  coord_equal(clip = "off") +
+  expand_limits(x = c(-0.3, 4.3)) +
+  theme_void()
+```
+
+The height is opposite the known angle, and the wire is the hypotenuse, so use the sine ratio:
+
+\begin{align}
+\sin 35^{\circ} & = \frac{h}{12}\\
+h & = 12 \times \sin 35^{\circ}\\
+& = 12 \times 0.5736\ldots\\
+& = 6.9 \text{ m}.
+\end{align}
+
+### Worked example 2: finding a side using the tangent ratio, with an angle in degrees and minutes
+
+A ramp makes an angle of $8^{\circ}30'$ (that is, $8$ degrees and $30$ minutes) with the horizontal. The horizontal distance covered is $4.2$ m. Find the vertical rise $x$, to two decimal places.
+
+```{r}
+#| label: fig-ramp-trig
+#| fig-cap: "A ramp making an angle of 8°30′ with the horizontal over 4.2 m."
+#| fig-width: 4
+#| fig-height: 2.6
+#| echo: false
+#| warning: false
+
+library(ggplot2)
+
+tri <- data.frame(
+  x = c(0, 4.2, 4.2),
+  y = c(0, 0, 0.63)
+)
+
+sq <- 0.2
+rightangle <- data.frame(
+  x = c(4.2 - sq, 4.2 - sq, 4.2),
+  y = c(0, sq, sq)
+)
+
+ggplot() +
+  geom_polygon(data = tri, aes(x, y),
+               fill = "grey90", colour = "black", linewidth = 0.8) +
+  geom_path(data = rightangle, aes(x, y), colour = "black", linewidth = 0.5) +
+  annotate("text", x = 2.1, y = -0.22, label = "4.2 m") +
+  annotate("text", x = 4.5, y = 0.32, label = "italic(x)", parse = TRUE) +
+  annotate("text", x = 0.85, y = 0.3, label = "8*degree*30*minute", parse = TRUE) +
+  coord_equal(clip = "off") +
+  expand_limits(x = c(-0.3, 4.9), y = c(-0.4, 0.9)) +
+  theme_void()
+```
+
+First convert the angle to a decimal number of degrees. There are $60$ minutes in one degree, so
+
+\begin{equation}
+8^{\circ}30' = 8 + \frac{30}{60} = 8.5^{\circ}.
+\end{equation}
+
+The rise is opposite the angle and the horizontal distance is adjacent, so use the tangent ratio:
+
+\begin{align}
+\tan 8.5^{\circ} & = \frac{x}{4.2}\\
+x & = 4.2 \times \tan 8.5^{\circ}\\
+& = 4.2 \times 0.1495\ldots\\
+& = 0.63 \text{ m}.
+\end{align}
+
+Alternatively, most calculators accept degrees and minutes directly using the degrees–minutes–seconds button, so you can enter $8^{\circ}30'$ without converting first. Either method gives the same result.
+
+### Worked example 3: finding a side using the cosine ratio
+
+A guy rope is attached to the top of a pole and anchored to the ground. The rope is $6$ m long and makes an angle of $52^{\circ}$ with the ground. Find the horizontal distance $d$ from the base of the pole to the anchor point, to one decimal place.
+
+```{r}
+#| label: fig-guyrope
+#| fig-cap: "A 6 m guy rope making an angle of 52° with the ground."
+#| fig-width: 4
+#| fig-height: 3
+#| echo: false
+#| warning: false
+
+library(ggplot2)
+
+# right angle at the base of the pole (origin)
+# adjacent (ground) = 6*cos(52°) ≈ 3.69, opposite (pole) = 6*sin(52°) ≈ 4.73
+tri <- data.frame(
+  x = c(0, 3.69, 0),
+  y = c(0, 0, 4.73)
+)
+
+sq <- 0.3
+rightangle <- data.frame(
+  x = c(sq, sq, 0),
+  y = c(0, sq, sq)
+)
+
+ggplot() +
+  geom_polygon(data = tri, aes(x, y),
+               fill = "grey90", colour = "black", linewidth = 0.8) +
+  geom_path(data = rightangle, aes(x, y), colour = "black", linewidth = 0.5) +
+  annotate("text", x = 1.85, y = -0.3, label = "italic(d)", parse = TRUE) +
+  annotate("text", x = 2.1, y = 2.6, label = "6 m") +
+  annotate("text", x = 3, y = 0.22, label = "52*degree", parse = TRUE) +
+  coord_equal(clip = "off") +
+  expand_limits(x = c(-0.4, 4.1), y = c(-0.6, 5)) +
+  theme_void()
+```
+
+The horizontal distance is adjacent to the known angle, and the rope is the hypotenuse, so use the cosine ratio:
+
+\begin{align}
+\cos 52^{\circ} & = \frac{d}{6}\\
+d & = 6 \times \cos 52^{\circ}\\
+& = 6 \times 0.6157\ldots\\
+& = 3.7 \text{ m}.
+\end{align}
+
+Together these examples show the full method: name the sides relative to the known angle, choose the ratio ($\sin$, $\cos$ or $\tan$) that links the known side to the unknown side, then rearrange and evaluate, converting any angle given in degrees and minutes as needed.

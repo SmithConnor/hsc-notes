@@ -1,0 +1,12 @@
+---
+title: "Relative frequency and probability"
+---
+
+::: {.callout-note}
+## Syllabus outcomes
+**MST-12-S1-07** models and solves problems involving the probabilities of simple and compound events.
+
+**MAO-WM-01** (Working mathematically) develops understanding and fluency in mathematics through exploring and connecting mathematical concepts, choosing and applying mathematical techniques to solve problems, and communicating their thinking and reasoning coherently and clearly.
+:::
+
+<!-- Content dot points to be added from NESA syllabus p. 31 -->

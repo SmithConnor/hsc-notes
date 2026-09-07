@@ -1,0 +1,59 @@
+---
+title: "Mathematics Standard 1"
+toc: false
+---
+
+Notes for the Year 12 Mathematics Standard 1 pathway. Seven focus areas across four areas of study: Algebra, Financial mathematics, Measurement, and Statistics.
+
+::: {.grid}
+
+::: {.g-col-4}
+### Algebraic relationships
+Simultaneous linear equations and graphs of practical situations.
+
+[Notes](algebraic-relationships.qmd)
+:::
+
+::: {.g-col-4}
+### Investment
+Simple and compound interest, and comparing investment strategies.
+
+[Notes](investment.qmd)
+:::
+
+::: {.g-col-4}
+### Depreciation and loans
+Depreciation methods, reducing balance loans, and credit cards.
+
+[Notes](depreciation-and-loans.qmd)
+:::
+
+::: {.g-col-4}
+### Right-angled triangles
+Pythagoras' theorem and trigonometry in right-angled triangles.
+
+[Notes](right-angled-triangles.qmd)
+:::
+
+::: {.g-col-4}
+### Ratios and rates
+Interpreting ratios and rates to solve practical problems.
+
+[Notes](ratios-and-rates.qmd)
+:::
+
+::: {.g-col-4}
+### Bivariate data analysis
+Displaying and interpreting bivariate datasets.
+
+[Notes](bivariate-data-analysis.qmd)
+:::
+
+::: {.g-col-4}
+### Relative frequency and probability
+Probabilities of simple and compound events.
+
+[Notes](relative-frequency-and-probability.qmd)
+:::
+
+:::
