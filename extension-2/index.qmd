@@ -1,0 +1,45 @@
+---
+title: "HSC Mathematics Extension 2"
+toc: false
+---
+
+Notes for the Year 12 Mathematics Extension 2 course. Five focus areas, one from each area of study: Proof, Vectors, Complex numbers, Calculus, and Mechanics. Choose a topic below.
+
+::: {.grid}
+
+::: {.g-col-4}
+### The nature of proof
+The language, notation and methods of proof, including proof by contradiction and proof of inequalities.
+
+[Notes](nature-of-proof.qmd)
+:::
+
+::: {.g-col-4}
+### Further work with vectors
+Vector equations of lines and curves in two and three dimensions.
+
+[Notes](vectors.qmd)
+:::
+
+::: {.g-col-4}
+### Introduction to complex numbers
+Algebraic and geometric representations of complex numbers.
+
+[Notes](complex-numbers.qmd)
+:::
+
+::: {.g-col-4}
+### Further integration
+Techniques of integration for solving problems.
+
+[Notes](further-integration.qmd)
+:::
+
+::: {.g-col-4}
+### Applications of calculus to mechanics
+Using mechanics to model and solve practical problems.
+
+[Notes](mechanics.qmd)
+:::
+
+:::

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>HSC Mathematics Extension 2 – CSM</title>
+<title>The nature of proof – CSM</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -75,11 +75,40 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -278,14 +307,42 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-language-and-notation-of-proof" id="toc-the-language-and-notation-of-proof" class="nav-link active" data-scroll-target="#the-language-and-notation-of-proof">The language and notation of proof</a>
+  <ul class="collapse">
+  <li><a href="#connectives-negation-and-quantifiers" id="toc-connectives-negation-and-quantifiers" class="nav-link" data-scroll-target="#connectives-negation-and-quantifiers">Connectives, negation and quantifiers</a></li>
+  <li><a href="#negating-compound-statements" id="toc-negating-compound-statements" class="nav-link" data-scroll-target="#negating-compound-statements">Negating compound statements</a></li>
+  <li><a href="#converse-equivalence-and-contrapositive" id="toc-converse-equivalence-and-contrapositive" class="nav-link" data-scroll-target="#converse-equivalence-and-contrapositive">Converse, equivalence and contrapositive</a></li>
+  </ul></li>
+  <li><a href="#illustrations-of-proofs" id="toc-illustrations-of-proofs" class="nav-link" data-scroll-target="#illustrations-of-proofs">Illustrations of proofs</a>
+  <ul class="collapse">
+  <li><a href="#proof-by-contradiction" id="toc-proof-by-contradiction" class="nav-link" data-scroll-target="#proof-by-contradiction">Proof by contradiction</a></li>
+  <li><a href="#examples-and-counterexamples" id="toc-examples-and-counterexamples" class="nav-link" data-scroll-target="#examples-and-counterexamples">Examples and counterexamples</a></li>
+  <li><a href="#proofs-involving-integers" id="toc-proofs-involving-integers" class="nav-link" data-scroll-target="#proofs-involving-integers">Proofs involving integers</a></li>
+  </ul></li>
+  <li><a href="#proof-of-inequalities" id="toc-proof-of-inequalities" class="nav-link" data-scroll-target="#proof-of-inequalities">Proof of inequalities</a>
+  <ul class="collapse">
+  <li><a href="#foundational-definitions-and-properties" id="toc-foundational-definitions-and-properties" class="nav-link" data-scroll-target="#foundational-definitions-and-properties">Foundational definitions and properties</a></li>
+  <li><a href="#the-triangle-inequality" id="toc-the-triangle-inequality" class="nav-link" data-scroll-target="#the-triangle-inequality">The triangle inequality</a></li>
+  <li><a href="#the-arithmetic-mean-geometric-mean-amgm-inequality" id="toc-the-arithmetic-mean-geometric-mean-amgm-inequality" class="nav-link" data-scroll-target="#the-arithmetic-mean-geometric-mean-amgm-inequality">The arithmetic mean – geometric mean (AM–GM) inequality</a></li>
+  <li><a href="#the-squeeze-theorem" id="toc-the-squeeze-theorem" class="nav-link" data-scroll-target="#the-squeeze-theorem">The squeeze theorem</a></li>
+  <li><a href="#strategies-for-proving-inequalities" id="toc-strategies-for-proving-inequalities" class="nav-link" data-scroll-target="#strategies-for-proving-inequalities">Strategies for proving inequalities</a></li>
+  </ul></li>
+  <li><a href="#further-proof-by-mathematical-induction" id="toc-further-proof-by-mathematical-induction" class="nav-link" data-scroll-target="#further-proof-by-mathematical-induction">Further proof by mathematical induction</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">HSC Mathematics Extension 2</h1>
+<h1 class="title">The nature of proof</h1>
 </div>
 
 
@@ -302,36 +359,158 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Notes for the Year 12 Mathematics Extension 2 course. Five focus areas, one from each area of study: Proof, Vectors, Complex numbers, Calculus, and Mechanics. Choose a topic below.</p>
-<div class="grid">
-<section id="the-nature-of-proof" class="level3 g-col-4">
-<h3 class="anchored" data-anchor-id="the-nature-of-proof">The nature of proof</h3>
-<p>The language, notation and methods of proof, including proof by contradiction and proof of inequalities.</p>
-<p><a href="../extension-2/nature-of-proof.html">Notes</a></p>
-</section>
-<section id="further-work-with-vectors" class="level3 g-col-4">
-<h3 class="anchored" data-anchor-id="further-work-with-vectors">Further work with vectors</h3>
-<p>Vector equations of lines and curves in two and three dimensions.</p>
-<p><a href="vectors.qmd">Notes</a></p>
-</section>
-<section id="introduction-to-complex-numbers" class="level3 g-col-4">
-<h3 class="anchored" data-anchor-id="introduction-to-complex-numbers">Introduction to complex numbers</h3>
-<p>Algebraic and geometric representations of complex numbers.</p>
-<p><a href="complex-numbers.qmd">Notes</a></p>
-</section>
-<section id="further-integration" class="level3 g-col-4">
-<h3 class="anchored" data-anchor-id="further-integration">Further integration</h3>
-<p>Techniques of integration for solving problems.</p>
-<p><a href="further-integration.qmd">Notes</a></p>
-</section>
-<section id="applications-of-calculus-to-mechanics" class="level3 g-col-4">
-<h3 class="anchored" data-anchor-id="applications-of-calculus-to-mechanics">Applications of calculus to mechanics</h3>
-<p>Using mechanics to model and solve practical problems.</p>
-<p><a href="mechanics.qmd">Notes</a></p>
-</section>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Syllabus outcomes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>ME2-12-01</strong> selects and applies the language, notation and methods of proof to prove results.</p>
+<p><strong>MAO-WM-01</strong> (Working mathematically) develops understanding and fluency in mathematics through exploring and connecting mathematical concepts, choosing and applying mathematical techniques to solve problems, and communicating their thinking and reasoning coherently and clearly.</p>
+</div>
+</div>
+<p>Proof is the activity that separates mathematics from every other subject. A result is not accepted because it looks true, or because it works in every case we have tried, but because it can be deduced with certainty from things already established. This focus area builds the language and machinery of proof, so the rest of Extension 2 can be written and read precisely.</p>
+<section id="the-language-and-notation-of-proof" class="level2">
+<h2 class="anchored" data-anchor-id="the-language-and-notation-of-proof">The language and notation of proof</h2>
+<p>A <strong>statement</strong> (or <strong>proposition</strong>) is a sentence that is either true or false, but not both. “<span class="math inline">\(7\)</span> is prime” is a statement (true). “<span class="math inline">\(x &gt; 3\)</span>” on its own is not, because its truth depends on <span class="math inline">\(x\)</span>.</p>
+<p>Most of proof is built from combining and transforming statements. The key vocabulary is below.</p>
+<section id="connectives-negation-and-quantifiers" class="level3">
+<h3 class="anchored" data-anchor-id="connectives-negation-and-quantifiers">Connectives, negation and quantifiers</h3>
+<p>For statements <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>:</p>
+<ol type="a">
+<li><p>The <strong>conjunction</strong> “<span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>” is written <span class="math inline">\(P \wedge Q\)</span>, and is true only when both <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> are true.</p></li>
+<li><p>The <strong>disjunction</strong> “<span class="math inline">\(P\)</span> or <span class="math inline">\(Q\)</span>” is written <span class="math inline">\(P \vee Q\)</span>, and is true when at least one of <span class="math inline">\(P\)</span>, <span class="math inline">\(Q\)</span> is true (this is the inclusive “or”).</p></li>
+<li><p>The <strong>negation</strong> of <span class="math inline">\(P\)</span> is “not <span class="math inline">\(P\)</span>”, written <span class="math inline">\(\neg P\)</span> or <span class="math inline">\(\sim P\)</span>. It is true exactly when <span class="math inline">\(P\)</span> is false.</p></li>
+<li><p>An <strong>implication</strong> is an “if–then” statement. “If <span class="math inline">\(P\)</span> then <span class="math inline">\(Q\)</span>” is written <span class="math inline">\(P \Rightarrow Q\)</span> (or <span class="math inline">\(P \to Q\)</span>) and read “<span class="math inline">\(P\)</span> implies <span class="math inline">\(Q\)</span>”. Here <span class="math inline">\(P\)</span> is the hypothesis and <span class="math inline">\(Q\)</span> is the conclusion.</p></li>
+</ol>
+<p>The <strong>quantifiers</strong> let us make statements about many objects at once. “For all” is written <span class="math inline">\(\forall\)</span>, and “there exists” is written <span class="math inline">\(\exists\)</span>. For example, <span class="math inline">\(\forall x \in \mathbb{R},\ x^2 \geq 0\)</span> reads “for all real <span class="math inline">\(x\)</span>, <span class="math inline">\(x^2\)</span> is greater than or equal to zero”.</p>
+</section>
+<section id="negating-compound-statements" class="level3">
+<h3 class="anchored" data-anchor-id="negating-compound-statements">Negating compound statements</h3>
+<p>Negation interacts with connectives, quantifiers and implications in fixed ways. These are worth knowing cold, since many proofs begin by negating a statement.</p>
+<ol type="a">
+<li><p>Double negation: <span class="math inline">\(\neg(\neg P) = P\)</span>.</p></li>
+<li><p>Negation of a conjunction: <span class="math inline">\(\neg(P \wedge Q) = (\neg P \vee \neg Q)\)</span>.</p></li>
+<li><p>Negation of a disjunction: <span class="math inline">\(\neg(P \vee Q) = (\neg P \wedge \neg Q)\)</span>.</p></li>
+<li><p>Negation of an implication: <span class="math inline">\(\neg(P \Rightarrow Q) = (P \wedge \neg Q)\)</span>.</p></li>
+</ol>
+<p>The last one deserves attention. To deny “if <span class="math inline">\(P\)</span> then <span class="math inline">\(Q\)</span>”, you assert that <span class="math inline">\(P\)</span> holds but <span class="math inline">\(Q\)</span> fails. This also gives a useful rewriting of an implication itself:</p>
+<p><span class="math display">\[P \Rightarrow Q \;=\; \neg(P \wedge \neg Q) \;=\; (\neg P \vee Q).\]</span></p>
+<p>Negation also flips quantifiers: <span class="math inline">\(\neg(\forall x,\ P(x)) = \exists x,\ \neg P(x)\)</span>, and <span class="math inline">\(\neg(\exists x,\ P(x)) = \forall x,\ \neg P(x)\)</span>. To deny that something holds for all <span class="math inline">\(x\)</span>, produce a single <span class="math inline">\(x\)</span> where it fails.</p>
+</section>
+<section id="converse-equivalence-and-contrapositive" class="level3">
+<h3 class="anchored" data-anchor-id="converse-equivalence-and-contrapositive">Converse, equivalence and contrapositive</h3>
+<p>Given the implication “if <span class="math inline">\(P\)</span> then <span class="math inline">\(Q\)</span>”, three related statements arise.</p>
+<p>The <strong>converse</strong> is “if <span class="math inline">\(Q\)</span> then <span class="math inline">\(P\)</span>”, written <span class="math inline">\(Q \Rightarrow P\)</span>. The converse of a true implication may or may not be true. For example, “if <span class="math inline">\(n\)</span> is a multiple of <span class="math inline">\(4\)</span> then <span class="math inline">\(n\)</span> is even” is true, but its converse “if <span class="math inline">\(n\)</span> is even then <span class="math inline">\(n\)</span> is a multiple of <span class="math inline">\(4\)</span>” is false (<span class="math inline">\(n = 6\)</span>).</p>
+<p><strong>Equivalence</strong> holds when both <span class="math inline">\(P \Rightarrow Q\)</span> and <span class="math inline">\(Q \Rightarrow P\)</span> are true. We write <span class="math inline">\(P \Leftrightarrow Q\)</span> (or <span class="math inline">\(P \leftrightarrow Q\)</span>), read “<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>”, commonly abbreviated “<span class="math inline">\(P\)</span> iff <span class="math inline">\(Q\)</span>”.</p>
+<p>The <strong>contrapositive</strong> of “if <span class="math inline">\(P\)</span> then <span class="math inline">\(Q\)</span>” is “if not <span class="math inline">\(Q\)</span> then not <span class="math inline">\(P\)</span>”, written <span class="math inline">\(\neg Q \Rightarrow \neg P\)</span>. An implication is always equivalent to its contrapositive:</p>
+<p><span class="math display">\[(P \Rightarrow Q) \Leftrightarrow (\neg Q \Rightarrow \neg P).\]</span></p>
+<p>This equivalence is a genuine proof tool: when a direct proof of <span class="math inline">\(P \Rightarrow Q\)</span> is awkward, proving the contrapositive instead is often easier and is just as valid.</p>
+<section id="worked-example-proof-by-contrapositive" class="level4">
+<h4 class="anchored" data-anchor-id="worked-example-proof-by-contrapositive">Worked example: proof by contrapositive</h4>
+<p>Prove that for an integer <span class="math inline">\(n\)</span>, if <span class="math inline">\(n^2\)</span> is even then <span class="math inline">\(n\)</span> is even.</p>
+<p>A direct attack (starting from “<span class="math inline">\(n^2\)</span> is even”) is clumsy. The contrapositive is “if <span class="math inline">\(n\)</span> is odd then <span class="math inline">\(n^2\)</span> is odd”, which is easy.</p>
+<p>Suppose <span class="math inline">\(n\)</span> is odd, so <span class="math inline">\(n = 2k + 1\)</span> for some integer <span class="math inline">\(k\)</span>. Then</p>
+<p><span class="math display">\[n^2 = (2k+1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1,\]</span></p>
+<p>which is odd. Since the contrapositive is true, the original statement is true. <span class="math inline">\(\blacksquare\)</span></p>
+</section>
+</section>
+</section>
+<section id="illustrations-of-proofs" class="level2">
+<h2 class="anchored" data-anchor-id="illustrations-of-proofs">Illustrations of proofs</h2>
+<section id="proof-by-contradiction" class="level3">
+<h3 class="anchored" data-anchor-id="proof-by-contradiction">Proof by contradiction</h3>
+<p>To prove a statement by <strong>contradiction</strong>, assume it is false, then derive a logical impossibility. Since the assumption led to something that cannot be, the assumption must have been wrong, so the original statement is true.</p>
+<section id="worked-example-irrationality-of-sqrt2" class="level4">
+<h4 class="anchored" data-anchor-id="worked-example-irrationality-of-sqrt2">Worked example: irrationality of <span class="math inline">\(\sqrt{2}\)</span></h4>
+<p>Prove that <span class="math inline">\(\sqrt{2}\)</span> is irrational.</p>
+<p>Assume the opposite: that <span class="math inline">\(\sqrt{2}\)</span> is rational. Then <span class="math inline">\(\sqrt{2} = \dfrac{a}{b}\)</span> for integers <span class="math inline">\(a, b\)</span> with <span class="math inline">\(b \neq 0\)</span> and the fraction in lowest terms (so <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> have no common factor).</p>
+<p>Squaring gives <span class="math inline">\(2 = \dfrac{a^2}{b^2}\)</span>, so <span class="math inline">\(a^2 = 2b^2\)</span>. Then <span class="math inline">\(a^2\)</span> is even, and by the earlier result <span class="math inline">\(a\)</span> is even, say <span class="math inline">\(a = 2m\)</span>. Substituting,</p>
+<p><span class="math display">\[(2m)^2 = 2b^2 \;\Rightarrow\; 4m^2 = 2b^2 \;\Rightarrow\; b^2 = 2m^2,\]</span></p>
+<p>so <span class="math inline">\(b^2\)</span> is even and hence <span class="math inline">\(b\)</span> is even. But then <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> share the factor <span class="math inline">\(2\)</span>, contradicting the assumption that the fraction was in lowest terms. The assumption is therefore false, and <span class="math inline">\(\sqrt{2}\)</span> is irrational. <span class="math inline">\(\blacksquare\)</span></p>
+</section>
+</section>
+<section id="examples-and-counterexamples" class="level3">
+<h3 class="anchored" data-anchor-id="examples-and-counterexamples">Examples and counterexamples</h3>
+<p>A single <strong>counterexample</strong> disproves a universal statement, because to deny “<span class="math inline">\(\forall x,\ P(x)\)</span>” we need only one <span class="math inline">\(x\)</span> with <span class="math inline">\(\neg P(x)\)</span>.</p>
+<p>For instance, the claim “every odd number is prime” is false: <span class="math inline">\(9\)</span> is odd but not prime. One counterexample settles it. Conversely, listing many examples where a statement holds never proves it; it only fails to disprove it.</p>
+</section>
+<section id="proofs-involving-integers" class="level3">
+<h3 class="anchored" data-anchor-id="proofs-involving-integers">Proofs involving integers</h3>
+<p>Many introductory proofs concern the integers, using the fact that any integer is either even (<span class="math inline">\(n = 2k\)</span>) or odd (<span class="math inline">\(n = 2k + 1\)</span>).</p>
+<section id="worked-example" class="level4">
+<h4 class="anchored" data-anchor-id="worked-example">Worked example</h4>
+<p>Prove that the product of two consecutive integers is always even.</p>
+<p>Let the integers be <span class="math inline">\(n\)</span> and <span class="math inline">\(n + 1\)</span>. Consider two cases.</p>
+<p>If <span class="math inline">\(n\)</span> is even, <span class="math inline">\(n = 2k\)</span>, then <span class="math inline">\(n(n+1) = 2k(n+1)\)</span>, which is even.</p>
+<p>If <span class="math inline">\(n\)</span> is odd, <span class="math inline">\(n = 2k + 1\)</span>, then <span class="math inline">\(n + 1 = 2k + 2 = 2(k+1)\)</span> is even, so <span class="math inline">\(n(n+1) = n \cdot 2(k+1)\)</span> is even.</p>
+<p>In both cases the product is even. <span class="math inline">\(\blacksquare\)</span></p>
+</section>
+</section>
+</section>
+<section id="proof-of-inequalities" class="level2">
+<h2 class="anchored" data-anchor-id="proof-of-inequalities">Proof of inequalities</h2>
+<p>Inequality proofs rely on a small toolkit of definitions and properties.</p>
+<section id="foundational-definitions-and-properties" class="level3">
+<h3 class="anchored" data-anchor-id="foundational-definitions-and-properties">Foundational definitions and properties</h3>
+<p>The defining fact is: for real <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, <span class="math inline">\(a &gt; b\)</span> <strong>if and only if</strong> <span class="math inline">\(a - b &gt; 0\)</span>. Reducing an inequality to “something positive” is the core move.</p>
+<p>The other essential fact is that squares of real numbers are non-negative:</p>
+<p><span class="math display">\[(a \pm b)^2 \geq 0 \quad \text{for all real } a, b.\]</span></p>
+<p>The following results for real numbers are used freely once established: if <span class="math inline">\(a &gt; b\)</span> then <span class="math inline">\(a \pm c &gt; b \pm c\)</span>; if <span class="math inline">\(a &gt; b &gt; 0\)</span> then <span class="math inline">\(\dfrac{1}{b} &gt; \dfrac{1}{a} &gt; 0\)</span> and conversely; if <span class="math inline">\(|a| &gt; |b|\)</span> then <span class="math inline">\(a^2 &gt; b^2\)</span> and conversely; if <span class="math inline">\(a &gt; b\)</span> and <span class="math inline">\(b &gt; c\)</span> then <span class="math inline">\(a &gt; c\)</span>; if <span class="math inline">\(a &gt; b\)</span> and <span class="math inline">\(c &gt; d\)</span> then <span class="math inline">\(a + c &gt; b + d\)</span>; if <span class="math inline">\(a &gt; b\)</span> and <span class="math inline">\(c &gt; 0\)</span> then <span class="math inline">\(ac &gt; bc\)</span>; and if <span class="math inline">\(a &gt; b\)</span> and <span class="math inline">\(c &lt; 0\)</span> then <span class="math inline">\(ac &lt; bc\)</span> (multiplying by a negative reverses the inequality).</p>
+<section id="worked-example-using-a-b2-geq-0" class="level4">
+<h4 class="anchored" data-anchor-id="worked-example-using-a-b2-geq-0">Worked example: using <span class="math inline">\((a-b)^2 \geq 0\)</span></h4>
+<p>Prove that <span class="math inline">\(a^2 + b^2 \geq 2ab\)</span> for all real <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</p>
+<p>Since a square is never negative,</p>
+<p><span class="math display">\[(a - b)^2 \geq 0 \;\Rightarrow\; a^2 - 2ab + b^2 \geq 0 \;\Rightarrow\; a^2 + b^2 \geq 2ab. \qquad \blacksquare\]</span></p>
+<p>Equality holds exactly when <span class="math inline">\(a = b\)</span>.</p>
+</section>
+</section>
+<section id="the-triangle-inequality" class="level3">
+<h3 class="anchored" data-anchor-id="the-triangle-inequality">The triangle inequality</h3>
+<p>For real numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>,</p>
+<p><span class="math display">\[|a + b| \leq |a| + |b|.\]</span></p>
+<p>Geometrically, the direct distance is never longer than a detour: the length of <span class="math inline">\(a + b\)</span> cannot exceed the combined lengths of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. Equality holds when <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> have the same sign (or one is zero).</p>
+</section>
+<section id="the-arithmetic-mean-geometric-mean-amgm-inequality" class="level3">
+<h3 class="anchored" data-anchor-id="the-arithmetic-mean-geometric-mean-amgm-inequality">The arithmetic mean – geometric mean (AM–GM) inequality</h3>
+<p>For two non-negative numbers, the arithmetic mean is at least the geometric mean:</p>
+<p><span class="math display">\[\forall a, b \geq 0, \quad \frac{a + b}{2} \geq \sqrt{ab}.\]</span></p>
+<p>This follows directly from a square being non-negative. Starting from <span class="math inline">\(\left(\sqrt{a} - \sqrt{b}\right)^2 \geq 0\)</span>,</p>
+<p><span class="math display">\[a - 2\sqrt{ab} + b \geq 0 \;\Rightarrow\; a + b \geq 2\sqrt{ab} \;\Rightarrow\; \frac{a+b}{2} \geq \sqrt{ab},\]</span></p>
+<p>with equality when <span class="math inline">\(a = b\)</span>.</p>
+</section>
+<section id="the-squeeze-theorem" class="level3">
+<h3 class="anchored" data-anchor-id="the-squeeze-theorem">The squeeze theorem</h3>
+<p>If <span class="math inline">\(f(x) \leq g(x) \leq h(x)\)</span> for all <span class="math inline">\(x\)</span> near <span class="math inline">\(k\)</span> (though not necessarily at <span class="math inline">\(k\)</span>), and</p>
+<p><span class="math display">\[\lim_{x \to k} f(x) = \lim_{x \to k} h(x) = L,\]</span></p>
+<p>then <span class="math inline">\(\lim_{x \to k} g(x) = L\)</span>. If the outer functions are squeezed to the same limit, the trapped function has nowhere else to go.</p>
+</section>
+<section id="strategies-for-proving-inequalities" class="level3">
+<h3 class="anchored" data-anchor-id="strategies-for-proving-inequalities">Strategies for proving inequalities</h3>
+<p>Beyond the specific results above, inequalities can be proved by building on previously established inequalities, by geometric arguments, or by graphical and calculus techniques (such as showing a function is always positive by examining its minimum), or a combination of these.</p>
+</section>
+</section>
+<section id="further-proof-by-mathematical-induction" class="level2">
+<h2 class="anchored" data-anchor-id="further-proof-by-mathematical-induction">Further proof by mathematical induction</h2>
+<p>Mathematical induction proves that a statement holds for all integers from some starting point. It has two parts: a <strong>base case</strong>, where the statement is verified for the first value, and an <strong>inductive step</strong>, where you assume the statement for some value and prove it for the next.</p>
+<p>A <strong>recursive formula</strong> (or <strong>recurrence relation</strong>) defines each term of a sequence using a preceding term, for example <span class="math inline">\(a_{n+1} = 2a_n + 1\)</span>. Induction is the natural tool for proving closed-form results about such sequences.</p>
+<section id="worked-example-induction-with-an-inequality" class="level4">
+<h4 class="anchored" data-anchor-id="worked-example-induction-with-an-inequality">Worked example: induction with an inequality</h4>
+<p>Prove that <span class="math inline">\(2^n &gt; n^2\)</span> for all integers <span class="math inline">\(n \geq 5\)</span>.</p>
+<p><strong>Base case</strong> (<span class="math inline">\(n = 5\)</span>): <span class="math inline">\(2^5 = 32\)</span> and <span class="math inline">\(5^2 = 25\)</span>, and <span class="math inline">\(32 &gt; 25\)</span>, so the statement holds.</p>
+<p><strong>Inductive step:</strong> assume <span class="math inline">\(2^k &gt; k^2\)</span> for some integer <span class="math inline">\(k \geq 5\)</span>. We must show <span class="math inline">\(2^{k+1} &gt; (k+1)^2\)</span>.</p>
+<p><span class="math display">\[2^{k+1} = 2 \cdot 2^k &gt; 2k^2 \quad \text{(by the assumption).}\]</span></p>
+<p>It now suffices to show <span class="math inline">\(2k^2 \geq (k+1)^2\)</span> for <span class="math inline">\(k \geq 5\)</span>. Expanding, <span class="math inline">\(2k^2 - (k+1)^2 = k^2 - 2k - 1\)</span>, which for <span class="math inline">\(k \geq 5\)</span> is <span class="math inline">\(k^2 - 2k - 1 = k(k-2) - 1 \geq 5(3) - 1 = 14 &gt; 0\)</span>. Hence <span class="math inline">\(2k^2 &gt; (k+1)^2\)</span>, and so</p>
+<p><span class="math display">\[2^{k+1} &gt; 2k^2 &gt; (k+1)^2.\]</span></p>
+<p>By induction, <span class="math inline">\(2^n &gt; n^2\)</span> for all integers <span class="math inline">\(n \geq 5\)</span>. <span class="math inline">\(\blacksquare\)</span></p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
