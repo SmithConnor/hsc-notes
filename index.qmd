@@ -1,7 +1,46 @@
 ---
-title: "hsc-notes"
+title: "HSC Mathematics Notes"
+toc: false
 ---
 
-This is a Quarto website.
+![](images/connor-lecture.png)
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+::: {.hero-banner}
+
+Clear, concise notes across all four HSC Mathematics courses. Organised by topic and mapped to the syllabus, so you can study smarter and find what you need fast.
+
+:::
+
+## Choose your course
+
+::: {.grid}
+
+::: {.g-col-6}
+### Standard
+For the Mathematics Standard course. Core topics through to Standard 2.
+
+[Start here](standard/index.qmd){.btn .btn-primary}
+:::
+
+::: {.g-col-6}
+### Advanced
+For the Mathematics Advanced course. Functions, calculus, statistics, and more.
+
+[Start here](advanced/index.qmd){.btn .btn-primary}
+:::
+
+::: {.g-col-6}
+### Extension 1
+Builds on Advanced. Further calculus, combinatorics, vectors, and proof.
+
+[Start here](extension-1/index.qmd){.btn .btn-primary}
+:::
+
+::: {.g-col-6}
+### Extension 2
+The most advanced course. Complex numbers, mechanics, and rigorous proof.
+
+[Start here](extension-2/index.qmd){.btn .btn-primary}
+:::
+
+:::

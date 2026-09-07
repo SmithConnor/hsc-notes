@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "hsc-notes",
+    "title": "HSC Mathematics Notes",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Clear, concise notes across all four HSC Mathematics courses. Organised by topic and mapped to the syllabus, so you can study smarter and find what you need fast."
   },
   {
     "objectID": "about.html",
@@ -12,5 +12,12 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "index.html#choose-your-course",
+    "href": "index.html#choose-your-course",
+    "title": "HSC Mathematics Notes",
+    "section": "Choose your course",
+    "text": "Choose your course\n\n\nStandard\nFor the Mathematics Standard course. Core topics through to Standard 2.\nStart here\n\n\nAdvanced\nFor the Mathematics Advanced course. Functions, calculus, statistics, and more.\nStart here\n\n\nExtension 1\nBuilds on Advanced. Further calculus, combinatorics, vectors, and proof.\nStart here\n\n\nExtension 2\nThe most advanced course. Complex numbers, mechanics, and rigorous proof.\nStart here"
   }
 ]

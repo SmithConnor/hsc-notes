@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "hsc-notes"
+  title: "CSM"
   navbar:
     left:
       - href: index.qmd
@@ -12,8 +12,8 @@ website:
 format:
   html:
     theme:
-      - cosmo
-      - brand
+      light: lux
+      dark: cyborg
     css: styles.css
     toc: true
 
